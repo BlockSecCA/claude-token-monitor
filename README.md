@@ -144,7 +144,7 @@ The monitoring system requires a custom Claude Desktop skill to work. Skills are
 - Skills extend Claude's capabilities with domain-specific knowledge
 - They're loaded at the start of each conversation
 - They can instruct Claude to perform automatic, silent actions
-- Documentation: https://support.claude.com/en/articles/10249342-how-do-i-add-a-skill-to-my-claude-project
+- Documentation: https://support.claude.com/en/articles/12512180-using-skills-in-claude
 
 **For this project, the skill:**
 1. Monitors Claude's context for system warnings
