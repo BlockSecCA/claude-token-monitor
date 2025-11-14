@@ -1,0 +1,32 @@
+# Implementation details with personal paths
+IMPLEMENTATION.md
+
+# Local configuration
+config.json
+*.local.*
+
+# Dashboard files (contain specific paths)
+dashboard.html
+token-usage.json
+
+# Launch scripts (contain specific paths)
+launch*.bat
+launch*.sh
+serve*.py
+
+# Skill files (contain specific paths)
+skill/
+*.skill
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

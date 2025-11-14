@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+"""
+Simple HTTP server for Claude Token Monitor dashboard.
+This is an EXAMPLE - modify paths for your system.
+"""
+
+import http.server
+import socketserver
+
+class TokenMonitorHandler(http.server.SimpleHTTPRequestHandler):
+    def log_message(self, format, *args):
+        # Suppress request logging to keep terminal clean
+        pass
+    
+    def do_GET(self):
+        # Redirect root to dashboard
+        if self.path == '/':
+            self.path = '/token-monitor.html'
+        return http.server.SimpleHTTPRequestHandler.do_GET(self)
+
+PORT = 8080
+
+print(f"Token Monitor running at http://localhost:{PORT}/")
+print("Press Ctrl+C to stop")
+
+with socketserver.TCPServer(("", PORT), TokenMonitorHandler) as httpd:
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print("\nServer stopped")

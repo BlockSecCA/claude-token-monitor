@@ -1,0 +1,19 @@
+@echo off
+REM Claude Token Monitor Launcher (Windows)
+REM This is an EXAMPLE - modify paths for your system
+
+echo Starting Claude Token Monitor...
+
+REM Change to your dashboard directory
+cd /d "C:\Path\To\Your\Dashboard"
+
+REM Start Python server in minimized window
+start /min python serve-monitor.py
+
+REM Wait for server to start
+timeout /t 2 /nobreak >nul
+
+REM Launch in Chrome app mode (clean window, no browser UI)
+start chrome --app=http://localhost:8080
+
+echo Token Monitor launched!
