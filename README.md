@@ -89,7 +89,6 @@ This hack exposes several interesting aspects of Claude's architecture:
 - Paths are system-specific and need configuration
 
 
-## Broader Implications
 
 ## Important Caveat: Actual Context Limits May Vary
 
@@ -137,6 +136,16 @@ This project demonstrates a pattern where users discover emergent system capabil
 - Conversation branch structure
 
 ## Credits
+
+## Broader Implications
+
+This project demonstrates a pattern where users discover emergent system capabilities by combining tools in ways vendors didn't anticipate. Similar techniques could expose other internal states:
+- Error patterns Claude sees but users don't
+- Internal reasoning steps
+- Tool call performance metrics
+- Conversation branch structure
+
+The gap between what AI models can see and what users can access creates opportunities for creative solutions like this one.
 
 Discovered and implemented during a conversation about AI system observability and the gap between what AI models can see versus what users can access.
 
