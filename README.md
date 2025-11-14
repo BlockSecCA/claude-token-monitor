@@ -88,9 +88,6 @@ This hack exposes several interesting aspects of Claude's architecture:
 - Skill must be loaded at conversation start to work automatically
 - Paths are system-specific and need configuration
 
-## Implementation
-
-See `IMPLEMENTATION.md` for detailed setup instructions (not included in public repo to protect personal information).
 
 ## Broader Implications
 
