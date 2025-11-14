@@ -135,8 +135,6 @@ This project demonstrates a pattern where users discover emergent system capabil
 - Tool call performance metrics
 - Conversation branch structure
 
-## Credits
-
 ## Broader Implications
 
 This project demonstrates a pattern where users discover emergent system capabilities by combining tools in ways vendors didn't anticipate. Similar techniques could expose other internal states:
@@ -148,10 +146,6 @@ This project demonstrates a pattern where users discover emergent system capabil
 The gap between what AI models can see and what users can access creates opportunities for creative solutions like this one.
 
 Discovered and implemented during a conversation about AI system observability and the gap between what AI models can see versus what users can access.
-
-## License
-
-MIT License - Feel free to adapt and improve!
 
 ## Example Code
 
@@ -222,3 +216,11 @@ The progress bar changes color based on remaining tokens:
 5. **Start a conversation** in Claude Desktop with the skill loaded
 
 The dashboard will automatically update as you use Claude and tool calls trigger system warnings.
+
+## Credits
+
+Discovered and implemented during a conversation about AI system observability and the gap between what AI models can see versus what users can access.
+
+## License
+
+MIT License - Feel free to adapt and improve!
