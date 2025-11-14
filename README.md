@@ -91,6 +91,45 @@ This hack exposes several interesting aspects of Claude's architecture:
 
 ## Broader Implications
 
+## Important Caveat: Actual Context Limits May Vary
+
+**⚠️ The advertised context window (190K-200K tokens) may not reflect the actual usable limit.**
+
+During our testing, we discovered significant discrepancies between the stated token budget and when conversations are forcibly terminated:
+
+- One conversation was terminated at **~81K tokens (43% of advertised 190K)**
+- Another conversation continued past **150K tokens (79% of advertised 190K)**
+- Both showed the same 190,000 token budget in system warnings
+
+### Possible Factors Affecting Real Limits
+
+**Peak vs. Off-Peak Hours:**
+Large context windows require significant compute resources. During peak usage times, Anthropic may dynamically reduce per-conversation limits to manage aggregate system load, even though the displayed budget remains constant.
+
+**Plan-Specific Limits:**
+Different subscription tiers (Pro, Max, Team, Enterprise) may have different actual limits that don't match their advertised context windows.
+
+**Conversation Characteristics:**
+- Conversations in Projects vs. regular chats
+- Number of branches/edits
+- File uploads and their sizes
+- Tool usage patterns
+
+### What This Means for You
+
+**Don't assume you have the full context window.** The token monitor shows what the system *reports*, but the actual termination point may be lower and can vary based on:
+- Time of day
+- System load
+- Your subscription plan
+- Conversation structure
+
+**Use the color coding as relative guidance:**
+- 🟢 Green (>50% remaining): Safe zone
+- 🟡 Yellow (20-50% remaining): Start planning to wrap up
+- 🔴 Red (<20% remaining): Critical - may hit limit soon
+
+**The real value of this monitor** is tracking *relative* usage trends, not absolute guarantees. It helps you avoid hitting the wall unexpectedly, even if that wall isn't where you think it is.
+
 This project demonstrates a pattern where users discover emergent system capabilities by combining tools in ways vendors didn't anticipate. Similar techniques could expose other internal states:
 - Error patterns Claude sees but users don't
 - Internal reasoning steps
